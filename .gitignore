@@ -3,3 +3,8 @@
 # - nodejs modules and related files
 
 node_modules/
+
+#
+# - generated css
+
+css/
