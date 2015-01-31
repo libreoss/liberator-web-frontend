@@ -14,5 +14,9 @@
   "license": "GPL3",
   "bugs": {
     "url": "https://github.com/Crawleyprint/liberator-web-frontend/issues"
+  },
+  "devDependencies": {
+    "gulp": "~3.8.10",
+    "gulp-webserver": "~0.9.0"
   }
 }
