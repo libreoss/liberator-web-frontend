@@ -1,6 +1,10 @@
 
 ###Git workflow
 
+**Getting the code**
+
+- Fork this repo, do stuff, make pull request back here.
+
 **Branch naming**
 
 - TBD
@@ -29,7 +33,7 @@ When naming files and directories, always use lowercase lettes and dash (-) as d
 	file-name.ext
 
 *Incorrect:*
-	
+
 	fileName.ext
 	file_name.ext
 
