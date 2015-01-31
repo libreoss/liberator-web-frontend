@@ -1,0 +1,18 @@
+{
+  "name": "liberator-web-frontend",
+  "version": "0.0.0",
+  "description": "Angularjs powered frontend for Liberator project <https://github.com/libreoss/liberator>",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Crawleyprint/liberator-web-frontend.git"
+  },
+  "author": "Mladen Stepanic <mladen.stepanic@gmail.com>",
+  "license": "GPL3",
+  "bugs": {
+    "url": "https://github.com/Crawleyprint/liberator-web-frontend/issues"
+  }
+}
