@@ -1,1 +1,5 @@
-.sass-cache
+# remove dependencies and generated content outside of the repository:
+#
+# - nodejs modules and related files
+
+node_modules/
