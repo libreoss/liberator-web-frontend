@@ -4,7 +4,8 @@
   "description": "Angularjs powered frontend for Liberator project <https://github.com/libreoss/liberator>",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "start": "npm install && gulp"
   },
   "repository": {
     "type": "git",

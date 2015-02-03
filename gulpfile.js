@@ -2,7 +2,7 @@ var path = require('path');
 
 var webserver = require('gulp-webserver');
 var sass = require('gulp-sass');
-var autoprefixer = require('autoprefixer');
+var autoprefixer = require('gulp-autoprefixer');
 
 global.gulp = require('gulp');
 global.liberatorPaths = {
