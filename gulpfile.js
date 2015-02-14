@@ -45,7 +45,6 @@ gulp.task('javascript', function() {
       .pipe(source('liberator.js'))
       .pipe(buffer())
       .pipe(sourcemaps.init({loadMaps: true}))
-      .pipe(uglify())
       .pipe(sourcemaps.write('./'))
       .pipe(gulp.dest('./app/dist/'));
   };
