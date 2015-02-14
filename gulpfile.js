@@ -15,7 +15,7 @@ var sourcemaps = require('gulp-sourcemaps');
 global.liberatorPaths = {
   app: path.resolve('./app'),
   sass: path.resolve('./app/sass/'),
-  sassGlob: path.resolve('./app/*.scss'),
+  sassGlob: path.resolve('./app/sass/*.scss'),
   css: path.resolve('./app/css'),
   jsGlob: path.resolve('./app/scripts/**/*.js'),
   jsEntry: path.resolve('./app/scripts/app.js')
@@ -62,10 +62,7 @@ gulp.task('sass', function compileStylesheets() {
       errLogToConsole: true
     }))
     .pipe(autoprefixer(['last 2 versions']))
-    .on('error', function(err) {
-      console.log(err.message);
-    })
-    .pipe(gulp.dest(liberatorPaths.css));
+    .pipe(gulp.dest('./app/css'));
 });
 
 gulp.task('watch', function initWatchers() {
