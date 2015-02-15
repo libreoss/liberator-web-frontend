@@ -1,5 +1,30 @@
-$color: red;
+// This file should not contain any styles, it is  for importing
+// modules only. Read on for more details.
+//
+// This project uses inuitcss framework for defining a layout.
+// CSS order matters with inuit and ITCSS, the set of developing principles
+// behind inuit. Main goal is avoidance of overriding previously set styles,
+// therefore, more performant css without complicated inheritance and cascades.
+//
+// For overview of ITCSS, see https://www.youtube.com/watch?v=1OKZOV-iLj4
+//
+// Use inuit kitchen sink for inuitcss reference:
+// http://csshugs.github.io/inuit-kitchen-sink/index.html
 
-body {
-  color: $color;
-}
+// SETTINGS
+@import "node_modules/inuit-starter-kit/node_modules/inuit-defaults/settings.defaults";
+
+// TOOLS
+@import "node_modules/inuit-starter-kit/node_modules/inuit-functions/tools.functions";
+@import "node_modules/inuit-starter-kit/node_modules/inuit-mixins/tools.mixins";
+
+// GENERIC
+@import "node_modules/inuit-starter-kit/node_modules/inuit-normalize/generic.normalize";
+@import "node_modules/inuit-starter-kit/node_modules/inuit-box-sizing/generic.box-sizing";
+
+// BASE
+@import "node_modules/inuit-starter-kit/node_modules/inuit-page/base.page";
+
+// OBJECTS
+
+// TRUMPS

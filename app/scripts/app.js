@@ -2,7 +2,6 @@
 
 require('angular');
 
-
 /**
  *
  */
