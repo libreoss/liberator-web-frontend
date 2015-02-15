@@ -63,8 +63,9 @@ for comperhensive list of components.
 Inuitcss is built upon @csswizardry's ITCSS methodology, basics can be found at
 [this youtube link](https://www.youtube.com/watch?v=1OKZOV-iLj4).
 
-*Note:*
+**Note:**
 
-There is an old repository for inuitcss which isn't being used anymore. All
-references to inuitcss across liberator are considered for https://github.com/inuitcss.
+**There is an old repository for inuitcss which isn't being used anymore. All
+references to inuitcss across liberator are considered for https://github.com/inuitcss organization 
+and repositories that belong to it.**
 
