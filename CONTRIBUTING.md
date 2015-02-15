@@ -51,7 +51,7 @@ per tab.
 
 **CSS naming convention**
 
-Liberator uses BEM naming convention, as explained in: (http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
+Liberator uses BEM naming convention, as explained at: http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
 
 **Inuitcss:**
 
@@ -62,3 +62,9 @@ for comperhensive list of components.
 
 Inuitcss is built upon @csswizardry's ITCSS methodology, basics can be found at
 [this youtube link](https://www.youtube.com/watch?v=1OKZOV-iLj4).
+
+*Note:*
+
+There is an old repository for inuitcss which isn't being used anymore. All
+references to inuitcss across liberator are considered for https://github.com/inuitcss.
+
