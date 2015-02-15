@@ -7,14 +7,16 @@
 
 **Branch naming**
 
-- TBD
+- Prefix your branches with type of update - feature|fix
 
 **Commit messages**
 
-Try to be as concise as possible while beeing informative. Describe 'what' instead of 'how'. See links above for detailed info, but the rule of thumb is:
+Try to be as concise as possible while beeing informative. Describe 'why'
+instead of 'how'. See links above for detailed info, but the rule of thumb is:
 
 - Keep commits atomic
-- Keep first line of commit messages below 65 characters. If you have more to say, insert blank line and write your novel.
+- Keep first line of commit messages below 65 characters. If you have more to
+say, insert blank line and write your novel.
 
 **Useful links:**
 
@@ -26,7 +28,8 @@ Try to be as concise as possible while beeing informative. Describe 'what' inste
 
 **Files:**
 
-When naming files and directories, always use lowercase lettes and dash (-) as delimiter.
+When naming files and directories, always use lowercase lettes and dash (-)
+as delimiter.
 
 *Correct:*
 
@@ -42,4 +45,10 @@ When naming files and directories, always use lowercase lettes and dash (-) as d
 
 **Indentation:**
 
-Use spaces for indentation, never tabs. Configure your editor to use soft tabs (or translate tabs to spaces, as labeled in some editors). Set it to 2 spaces per tab.
+Use spaces for indentation, never tabs. Configure your editor to use soft tabs
+(or translate tabs to spaces, as labeled in some editors). Set it to 2 spaces
+per tab.
+
+**CSS naming convention**
+
+Liberator uses BEM naming convention, as explained in: (http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
