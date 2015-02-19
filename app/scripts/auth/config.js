@@ -8,7 +8,7 @@ module.exports = [
     $stateProvider
       .state('auth', {
         url : '/auth',
-        templateUrl: 'views/auth/root.html',
+        templateUrl: 'views/auth/root.html'
       })
       .state('auth.login', {
         name : '/login',
@@ -18,6 +18,6 @@ module.exports = [
         name : '/reset-password',
         templateUrl : './views/rpass.html'
       });
-  };
-]
+  }
+];
 

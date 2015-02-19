@@ -1,13 +1,13 @@
 'use strict';
 
 require('angular');
-
+require('./auth/app.js');
 /**
  *
  */
 angular.module('Liberator', [
     require('angular-ui-router'),
-    'auth'
+    'Liberator.auth'
   ])
 
   .config(require('./config.js'))

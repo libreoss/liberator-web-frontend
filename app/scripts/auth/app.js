@@ -2,7 +2,7 @@
 
 require('angular');
 
-angular.module('auth',[
+angular.module('Liberator.auth',[
   require('angular-ui-router'),
 ])
 
