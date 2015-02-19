@@ -7,7 +7,7 @@ require('angular');
  */
 angular.module('Liberator', [
     require('angular-ui-router'),
-    require('auth')
+    'auth'
   ])
 
   .config(require('./config.js'))
