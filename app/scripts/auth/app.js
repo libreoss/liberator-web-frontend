@@ -3,7 +3,7 @@
 require('angular');
 
 angular.module('auth',[
-  require('ui-router'),
+  require('angular-ui-router'),
 ])
 
   .config(require('./config'));
