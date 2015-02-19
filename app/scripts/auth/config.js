@@ -11,11 +11,11 @@ module.exports = [
         templateUrl: 'views/auth/root.html',
       })
       .state('auth.login', {
-        name : 'login',
+        name : '/login',
         templateUrl : './views/login.html'
       })
       .state('auth.reset-password', {
-        name : 'reset-password',
+        name : '/reset-password',
         templateUrl : './views/rpass.html'
       });
   };
