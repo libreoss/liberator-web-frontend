@@ -8,7 +8,7 @@ module.exports = [
     $stateProvider
       .state('auth', {
         url : '/auth',
-        templateUrl: 'views/auth/root.html'
+        template: 'Hello from auth'
       })
       .state('auth.login', {
         name : '/login',
