@@ -6,4 +6,8 @@ angular.module('Liberator.auth',[
   require('angular-ui-router'),
 ])
 
-  .config(require('./config'));
+  .config(require('./config'))
+
+  .service('loginService', require('./service.js'))
+
+  .run(require('./run.js'));

@@ -12,5 +12,8 @@ angular.module('Liberator', [
 
   .config(require('./config.js'))
 
-  .controller('AppController', require('./app-controller.js'));
+  .controller('AppController', require('./app-controller.js'))
+
+  .constant('API_URL', '');
+
 

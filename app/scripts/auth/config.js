@@ -8,14 +8,17 @@ module.exports = [
     $stateProvider
       .state('auth', {
         url : '/auth',
+        abstract: true,
         template: 'Hello from auth'
       })
       .state('auth.login', {
-        name : '/login',
+        url: '/login',
+        public: true,
         template : 'Hello from login'
       })
       .state('auth.reset-password', {
-        name : '/reset-password',
+        url: '/reset-password',
+        public: true,
         template : 'Hello from password reset'
       });
   }
