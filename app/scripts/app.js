@@ -14,6 +14,6 @@ angular.module('Liberator', [
 
   .controller('AppController', require('./app-controller.js'))
 
-  .constant('API_URL', '');
+  .constant('API_URL', 'http://192.168.66.6:8000/api/v1');
 
 
