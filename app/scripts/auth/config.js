@@ -1,25 +1,23 @@
 'use strict'
 
 module.exports = [
-  '$urlRouterProvider',
   '$stateProvider',
-  function authConfig($urlRouterProvider, $stateProvider) {
+  function authConfig($stateProvider) {
 
     $stateProvider
       .state('auth', {
         url : '/auth',
-        abstract: true,
-        template: 'Hello from auth'
+        template: '<div ui-view></div>',
       })
       .state('auth.login', {
         url: '/login',
         public: true,
-        template : 'Hello from login'
+        templateUrl: 'scripts/auth/views/login.html'
       })
       .state('auth.reset-password', {
         url: '/reset-password',
         public: true,
-        template : 'Hello from password reset'
+        templateUrl: 'scripts/auth/views/forgot-password.html'
       });
   }
 ];

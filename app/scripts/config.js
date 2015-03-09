@@ -11,6 +11,7 @@ module.exports = [
       .state('home', {
         url: '/',
         controller: 'AppController',
+        public: true,
         templateUrl: 'views/app-template.html'
       });
 
