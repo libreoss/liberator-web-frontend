@@ -13,6 +13,7 @@
 
 // SETTINGS
 @import "node_modules/inuit-starter-kit/node_modules/inuit-defaults/settings.defaults";
+@import "settings/liberator";
 
 // TOOLS
 @import "node_modules/inuit-starter-kit/node_modules/inuit-functions/tools.functions";
@@ -25,14 +26,20 @@
 
 // BASE
 @import "node_modules/inuit-starter-kit/node_modules/inuit-page/base.page";
+@import "base/elements";
+@import "base/forms";
 
 // OBJECTS
 @import "node_modules/inuit-layout/objects.layout";
 @import "node_modules/inuit-buttons/objects.buttons";
+@import "objects/buttons";
+@import "objects/forms";
+@import "objects/container";
 
 //COMPONENTS (Custom modules)
-@import "login-form.scss";
+@import "components/login-form";
 
 // TRUMPS
 @import "node_modules/inuit-spacing/trumps.spacing";
 @import "node_modules/inuit-widths/trumps.widths";
+@import "trumps/helpers";

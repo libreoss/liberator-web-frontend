@@ -1,0 +1,33 @@
+.login-form {
+  font-style: italic;
+  margin-top: 100px;
+
+  input {
+    padding: 15px 0;
+  }
+
+  label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #999999;
+    pointer-events: none;
+    transition: all 0.15s ease-out 0s;
+  }
+
+  input:focus + label,
+  input.has-value + label {
+    top: -10px;
+    font-size: 12px;
+    color: #aaaaaa;
+  }
+}
+
+.input-group {
+  position: relative;
+}
+
+.forgot-password {
+  position: relative;
+}
