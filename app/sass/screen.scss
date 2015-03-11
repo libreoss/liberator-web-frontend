@@ -17,6 +17,7 @@
 // TOOLS
 @import "node_modules/inuit-starter-kit/node_modules/inuit-functions/tools.functions";
 @import "node_modules/inuit-starter-kit/node_modules/inuit-mixins/tools.mixins";
+@import "node_modules/inuit-tools-widths/tools.widths";
 
 // GENERIC
 @import "node_modules/inuit-starter-kit/node_modules/inuit-normalize/generic.normalize";
@@ -26,5 +27,12 @@
 @import "node_modules/inuit-starter-kit/node_modules/inuit-page/base.page";
 
 // OBJECTS
+@import "node_modules/inuit-layout/objects.layout";
+@import "node_modules/inuit-buttons/objects.buttons";
+
+//COMPONENTS (Custom modules)
+@import "login-form.scss";
 
 // TRUMPS
+@import "node_modules/inuit-spacing/trumps.spacing";
+@import "node_modules/inuit-widths/trumps.widths";
