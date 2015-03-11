@@ -3,12 +3,12 @@
   <fieldset class="layout">
     <div class="layout__item u-4/10">
       <div class="position--relative">
-        <input type="text" class="u-1/1">
+        <input type="text" ng-model="user.email" class="u-1/1">
         <label>Username</label>
       </div>
     </div><div class="layout__item u-4/10">
       <div class="position--relative">
-        <input type="password" class="u-1/1">
+        <input type="password" ng-model="user.password" class="u-1/1">
         <label>Password</label>
       </div>
     </div><div class="layout__item u-2/10">
@@ -18,4 +18,5 @@
     </div>
   </fieldset>
 
+  {{ user }}
 </form>

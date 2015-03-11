@@ -1,21 +1,26 @@
 'use strict'
 
-module.examples[
+module.exports = [
   '$scope',
   'loginService',
-  function loginControler($scope, loginService) {
+
+  function loginController($scope, loginService) {
+
     $scope.user = {
       email: '',
       password: ''
     };
 
-    $scope.login = function(user){
+    $scope.login = function(user) {
       loginService.logIn(user)
-      .then(function(){
+      .then(
+        function() {
           console.log('Success');
-        }, function(){
+        },
+        function(){
           console.log('Success');
-        });
+        }
+      );
     };
-  };
+  }
 ];
