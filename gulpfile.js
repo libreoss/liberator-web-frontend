@@ -28,7 +28,8 @@ global.liberatorPaths = {
 gulp.task('webserver', ['sass', 'javascript', 'watch'], function setupWebserver() {
   gulp.src(liberatorPaths.app)
     .pipe(webserver({
-      livereload: true
+      livereload: true,
+      port: 9000
     }));
 });
 
