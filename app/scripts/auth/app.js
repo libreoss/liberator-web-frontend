@@ -8,6 +8,8 @@ angular.module('Liberator.auth',[
 
   .config(require('./config'))
 
+  .controller('loginControler', require('./controller.js'))
+
   .service('loginService', require('./service.js'))
 
   .run(require('./run.js'));
