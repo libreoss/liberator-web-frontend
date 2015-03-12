@@ -1,4 +1,7 @@
-<form novalidate class="login-form o-container o-container--narrow u-8/10">
+<form
+    novalidate
+    ng-submit="login()"
+    class="login-form o-container o-container--narrow u-8/10">
 
   <fieldset class="layout">
     <div class="layout__item u-4/10">
@@ -12,7 +15,7 @@
         <label>Password</label>
       </div>
     </div><div class="layout__item u-2/10">
-      <button class="btn u-1/1">Login</button>
+      <button type="submit" class="btn u-1/1">Login</button>
     </div><div class="layout__item u-1/1 text--right">
       <a href="#" class="forgot-password">Forgot your password?</a>
     </div>

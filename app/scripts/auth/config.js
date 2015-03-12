@@ -8,6 +8,7 @@ module.exports = [
       .state('auth', {
         url : '/auth',
         template: '<div ui-view></div>',
+        controller: 'LoginController'
       })
       .state('auth.login', {
         url: '/login',
