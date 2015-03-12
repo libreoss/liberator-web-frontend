@@ -7,6 +7,10 @@ html {
 a {
   text-decoration: none;
   color: $base-color;
+  border-bottom: 1px solid transparent;
+  &:hover {
+    border-bottom: 1px solid $base-color;
+  }
 }
 
 fieldset {
