@@ -2,6 +2,7 @@
 $base-color:               #b73535;
 $inuit-btn-background: $base-color;
 $inuit-btn-border-width: 2px;
+$inuit-btn-border-color: #791919;
 $inuit-widths-columns: (
     1,
     2,
@@ -18,3 +19,6 @@ $inuit-widths-columns: (
 
 $base-font-stack: Georgia, Cambria, "Times New Roman", Times, serif;
 
+$inuit-enable-margins--large: true;
+$inuit-enable-responsive-margins: true;
+$inuit-generate-spacing-alias: s;
