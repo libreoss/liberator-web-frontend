@@ -1,0 +1,18 @@
+html {
+  font-family: $base-font-stack;
+  font-size: $inuit-base-font-size;
+}
+
+
+a {
+  text-decoration: none;
+  color: $base-color;
+  border-bottom: 1px solid transparent;
+  &:hover {
+    border-bottom: 1px solid $base-color;
+  }
+}
+
+fieldset {
+  border: 0;
+}

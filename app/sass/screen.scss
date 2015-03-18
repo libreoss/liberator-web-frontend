@@ -13,10 +13,15 @@
 
 // SETTINGS
 @import "node_modules/inuit-starter-kit/node_modules/inuit-defaults/settings.defaults";
+@import "node_modules/inuit-responsive-settings/settings.responsive";
+@import "settings/liberator";
+@import "settings/defaults";
 
 // TOOLS
 @import "node_modules/inuit-starter-kit/node_modules/inuit-functions/tools.functions";
 @import "node_modules/inuit-starter-kit/node_modules/inuit-mixins/tools.mixins";
+@import "node_modules/inuit-tools-widths/tools.widths";
+@import "node_modules/inuit-responsive-tools/tools.responsive";
 
 // GENERIC
 @import "node_modules/inuit-starter-kit/node_modules/inuit-normalize/generic.normalize";
@@ -24,7 +29,22 @@
 
 // BASE
 @import "node_modules/inuit-starter-kit/node_modules/inuit-page/base.page";
+@import "base/elements";
+@import "base/forms";
 
 // OBJECTS
+@import "node_modules/inuit-layout/objects.layout";
+@import "node_modules/inuit-buttons/objects.buttons";
+@import "objects/buttons";
+@import "objects/forms";
+@import "objects/container";
+
+//COMPONENTS (Custom modules)
+@import "components/login-form";
 
 // TRUMPS
+@import "node_modules/inuit-spacing/trumps.spacing";
+@import "node_modules/inuit-widths/trumps.widths";
+@import "node_modules/inuit-responsive-widths/trumps.widths-responsive";
+@import "node_modules/inuit-responsive-spacing/trumps.spacing-responsive";
+@import "trumps/helpers";

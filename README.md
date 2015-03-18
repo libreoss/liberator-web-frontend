@@ -20,7 +20,7 @@ tasks.
    - `npm install -g gulp`
 
 After that's done, `cd` to this repo's root folder and run `npm start` and point
-your browser to `https://localhost:8000`. You'll need to accept SSL certificate
+your browser to `https://localhost:9000`. You'll need to accept SSL certificate
 we use for development first.
 
 For contributing, see [Contributing guidelines](CONTRIBUTING.md).

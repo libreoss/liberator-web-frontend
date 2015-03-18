@@ -1,0 +1,23 @@
+input {
+  font-size: 18px;
+  background: #fff;
+  color: $base-color;
+  display: inline-block;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &[type="text"],
+  &[type="password"] {
+    border: none;
+    border-bottom: solid 2px $base-color;
+  }
+  &[type="submit"] {
+    &:active {
+      color: white;
+      background: $base-color;
+    }
+  }
+}
