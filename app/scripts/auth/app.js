@@ -12,4 +12,6 @@ angular.module('Liberator.auth',[
 
   .service('loginService', require('./service.js'))
 
-  .run(require('./run.js'));
+  .run(require('./run.js'))
+
+  .factory('authInterceptor', require('./interceptor.js'));
