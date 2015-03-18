@@ -9,7 +9,7 @@ module.exports[
       'responseError' : function(response){
         if ((response.status === 401) || (response.status === 404)){
           $injector.get('$state').go('auth.login');
-          $injector.get('authService').logOut();
+          $injector.get('loginService').logOut();
         }
         return $q.reject(response);
       }

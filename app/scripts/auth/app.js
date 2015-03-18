@@ -14,4 +14,4 @@ angular.module('Liberator.auth',[
 
   .run(require('./run.js'))
 
-  .factory('auuthInterceptor', require('./interceptor.js'));
+  .factory('authInterceptor', require('./interceptor.js'));
