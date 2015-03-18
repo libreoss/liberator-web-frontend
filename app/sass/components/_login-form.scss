@@ -17,7 +17,7 @@
   }
 
   input:focus + label,
-  input.has-value + label {
+  input:valid + label {
     top: -10px;
     font-size: 12px;
     color: #aaaaaa;
