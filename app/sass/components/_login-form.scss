@@ -1,9 +1,9 @@
 .login-form {
   font-style: italic;
-  margin-top: 100px;
+  margin-top: 6.25rem;
 
   input {
-    padding: 15px 0;
+    padding: 0.9375rem 0;
   }
 
   label {
@@ -18,8 +18,8 @@
 
   input:focus + label,
   input:valid + label {
-    top: -10px;
-    font-size: 12px;
+    top: -0.625rem;
+    font-size: 0.75rem;
     color: #aaaaaa;
   }
 }
