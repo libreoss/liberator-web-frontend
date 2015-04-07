@@ -2,12 +2,14 @@
 
 require('angular');
 require('./auth/app.js');
+require('./new_article/app.js');
 /**
  *
  */
 angular.module('Liberator', [
     require('angular-ui-router'),
-    'Liberator.auth'
+    'Liberator.auth',
+    'Liberator.new_article',
   ])
 
   .config(require('./config.js'))
