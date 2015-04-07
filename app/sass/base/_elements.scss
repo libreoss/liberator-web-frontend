@@ -1,8 +1,11 @@
 html {
   font-family: $base-font-stack;
-  font-size: $inuit-base-font-size;
+  font-size: $inuit-base-font-size/1.6;
 }
 
+body {
+    font-size: 1.6rem;
+}
 
 a {
   text-decoration: none;
