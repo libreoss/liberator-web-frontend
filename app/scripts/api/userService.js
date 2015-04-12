@@ -11,8 +11,14 @@ module.exports = [
             return $http.get(API_URL + 'users/');
         }
 
+        function getUser(user_id) {
+            console.log("blah");
+            return $http.get(API_URL + 'users/' + user_id);
+        }
+
         return {
             getUsers : getUsers,
+            getUser  : getUser,
         };
     }
 ];
