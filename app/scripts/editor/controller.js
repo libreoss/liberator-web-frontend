@@ -3,16 +3,23 @@
 module.exports = [
     '$scope',
     '$http',
-    'articles',
     'API_URL',
 
-    function newArticleController($scope, $http, articles, API_URL) {
+    function newArticleController($scope, $http, API_URL) {
         $http.get(API_URL+'article-states/')
             .success(function(data) {
                 $scope.states = data;
             })
             .error(function(data) {
                 $scope.states = "error";
+            });
+
+        $http.get(API_URL+'articles/')
+            .success(function(data) {
+                $scope.articles = data;
+            })
+            .error(function(data) {
+                $scope.articles = "error";
             });
 
         $http.get(API_URL+'users/')

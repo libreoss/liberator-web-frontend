@@ -1,0 +1,19 @@
+<h1>Archive</h1>
+
+{{ status }}
+
+<table border="1" pading="10px">
+
+    <th>ID</th>
+    <th>Authors</th>
+    <th>Titles</th>
+
+    <tr ng-repeat="article in articles">
+        <td> {{ article.id }} </td>
+        <td> <div ng-repeat="user in  users | filter:{id:article.authors[0]}">
+                {{ user.email }}
+            </div>
+        </td>
+        <td> {{article.titles[0].title}} </td>
+    </tr>
+</table>

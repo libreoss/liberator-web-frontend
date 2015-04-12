@@ -1,15 +1,20 @@
 'use strict';
 
 require('angular');
+require('angular-resource');
 require('./auth/app.js');
 require('./new_article/app.js');
+require('./archive/app.js');
+require('./api/app.js');
 /**
  *
  */
 angular.module('Liberator', [
     require('angular-ui-router'),
+    'Liberator.api',
     'Liberator.auth',
     'Liberator.new_article',
+    'Liberator.archive',
   ])
 
   .config(require('./config.js'))
