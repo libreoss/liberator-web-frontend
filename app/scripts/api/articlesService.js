@@ -22,9 +22,14 @@ module.exports = [
                     });
       }
 
+      function getArticle(article_id) {
+          return $http.get(API_URL + 'articles/' + article_id + '/');
+      }
+
       return {
         getArticles      : getArticles,
         createNewArticle : createNewArticle,
+        getArticle       : getArticle,
       };
   }
 ];

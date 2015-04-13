@@ -9,7 +9,7 @@
     <th width="200px">Titles</th>
 
     <tr ng-repeat="article in articles | orderBy:'id'">
-        <td> {{ article.id }} </td>
+        <td> <a href="#/article/{{article.id}}">{{ article.id }}</a> </td>
         <td>
             <div ng-repeat="author in getAuthorsInfo(article.authors)">
                 {{ author.email }}
