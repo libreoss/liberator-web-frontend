@@ -12,7 +12,6 @@ module.exports = [
         }
 
         function getUser(user_id) {
-            console.log("blah");
             return $http.get(API_URL + 'users/' + user_id);
         }
 

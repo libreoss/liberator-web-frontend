@@ -6,4 +6,5 @@ angular.module('Liberator.api', [
     require('angular-ui-router'),
 ])
     .service('articles', require('./articlesService.js'))
-    .service('users', require('./userService.js'));
+    .service('users', require('./userService.js'))
+    .service('titles', require('./titleService.js'));

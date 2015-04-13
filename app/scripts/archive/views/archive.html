@@ -15,6 +15,10 @@
                 {{ author.email }}
             </div>
         </td>
-        <td> {{article.titles[0].title}} </td>
+        <td>
+            <div ng-repeat="title in article.titles">
+                {{ title.title }}
+            </div>
+        </td>
     </tr>
 </table>
