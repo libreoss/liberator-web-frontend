@@ -12,7 +12,7 @@ module.exports = [
         }
 
         function getUser(user_id) {
-            return $http.get(API_URL + 'users/' + user_id);
+            return $http.get(API_URL + 'users/' + user_id + '/');
         }
 
         return {

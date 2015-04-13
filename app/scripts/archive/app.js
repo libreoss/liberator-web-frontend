@@ -7,4 +7,4 @@ angular.module('Liberator.archive', [
     require('angular-resource'),
 ])
    .config(require('./config'))
-   .controller('archiveController', require('./controller.js'))
+   .controller('archiveController', require('./controller.js'));

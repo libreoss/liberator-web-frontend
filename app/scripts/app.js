@@ -7,6 +7,7 @@ require('./new_article/app.js');
 require('./archive/app.js');
 require('./api/app.js');
 require('./article/app.js');
+require('./user/app.js');
 /**
  *
  */
@@ -17,6 +18,7 @@ angular.module('Liberator', [
     'Liberator.new_article',
     'Liberator.archive',
     'Liberator.article',
+    'Liberator.user',
   ])
 
   .config(require('./config.js'))

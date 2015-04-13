@@ -9,6 +9,10 @@ module.exports = [
             return $http.get(API_URL + 'article-states/');
         }
 
+        function getState(state_id) {
+            return $http.get(API_URL + 'article-states/' + state_id);
+        }
+
         return {
             getStates : getStates,
         };
