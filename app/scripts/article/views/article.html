@@ -1,7 +1,9 @@
 Authors:
 
 <ul>
-    <li ng-repeat="author in article.authors">{{ author }}</li>
+    <li ng-repeat="author in getAuthorsInfo(users, article.authors)">
+        {{ author.email }}
+    </li>
 </ul>
 
 Titles:

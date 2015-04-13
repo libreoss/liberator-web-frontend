@@ -7,18 +7,24 @@
     <th>ID</th>
     <th width="300px">Authors</th>
     <th width="200px">Titles</th>
+    <th width="200px">State</th>
 
     <tr ng-repeat="article in articles | orderBy:'id'">
         <td> <a href="#/article/{{article.id}}">{{ article.id }}</a> </td>
-        <td>
-            <div ng-repeat="author in getAuthorsInfo(article.authors)">
-                {{ author.email }}
-            </div>
-        </td>
         <td>
             <div ng-repeat="title in article.titles">
                 {{ title.title }}
             </div>
         </td>
+        <td>
+            <div ng-repeat="author in getAuthorsInfo(users, article.authors)">
+                {{ author.email }}
+            </div>
+        </td>
+        <td>
+            {{ getStateInfo(states, article.state ).name }}
+        </td>
     </tr>
 </table>
+
+{{ states }}

@@ -7,4 +7,6 @@ angular.module('Liberator.api', [
 ])
     .service('articles', require('./articlesService.js'))
     .service('users', require('./userService.js'))
-    .service('titles', require('./titleService.js'));
+    .service('titles', require('./titleService.js'))
+    .service('states', require('./stateService.js'))
+    .service('utils', require('./utils.js'));

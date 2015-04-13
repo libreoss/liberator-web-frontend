@@ -3,11 +3,12 @@
 module.exports = [
     '$scope',
     '$window',
-    'API_URL',
     'articles',
     'users',
+    'states',
+    'utils',
 
-    function archiveController($scope, $window, API_URL, articles, users) {
+    function archiveController($scope, $window, articles, users, states, utils) {
         articles.getArticles().then( function(response) {
             $scope.articles = response["data"];
         });
@@ -17,23 +18,12 @@ module.exports = [
 
         });
 
-        $scope.getAuthorsInfo = function( author_ids ) {
-            var result = [];
+        states.getStates().then( function(response) {
+            $scope.states = response["data"];
+        });
 
-            for(var i = 0; i < author_ids.length; i++)
-            {
-                for(var j = 0; j < $scope.users.length; j++)
-                {
-                    if($scope.users[j].id === author_ids[i])
-                    {
-                        result.push($scope.users[j]);
-                        break;
-                    }
-                }
-            }
-
-            return result;
-        }
+        $scope.getAuthorsInfo = utils.getAuthorsInfo;
+        $scope.getStateInfo  = utils.getStateInfo;
 
     }
 ];
