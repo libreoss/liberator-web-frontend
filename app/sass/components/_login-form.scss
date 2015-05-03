@@ -17,6 +17,7 @@
   }
 
   input:focus + label,
+  input.ng-invalid-email + label,
   input:valid + label {
     top: -1rem;
     font-size: 1.2rem;

@@ -1,18 +1,32 @@
 <form
     novalidate
     ng-submit="login()"
+    name="loginForm"
     class="login-form o-container o-container--narrow u-8/10">
 
   <fieldset class="layout">
     <div class="layout__item u-4/10 u-1/1-palm palm-mb">
       <div class="position--relative">
-        <input type="text" ng-model="user.email" name="email" class="u-1/1" required>
+        <input type="email" ng-model="user.email" name="email" class="u-1/1" required>
         <label for="email">Email</label>
+      </div>
+      <div class="error" ng-messages="loginForm.email.$error" role="alert" ng-show="loginForm.email.$touched || (loginForm.$submitted && loginForm.$invalid)">
+        <div ng-message="email">
+          Please enter a valid email address
+        </div>
+        <div ng-message="required">
+          Email is required
+        </div>
       </div>
     </div><div class="layout__item u-4/10 u-1/1-palm palm-mb">
       <div class="position--relative">
         <input type="password" ng-model="user.password" name="password" class="u-1/1" required>
         <label for="password">Password</label>
+      </div>
+      <div class="error" ng-messages="loginForm.password.$error" role="alert" ng-show="loginForm.password.$touched  || (loginForm.$submitted && loginForm.$invalid)">
+        <div ng-message="required">
+          Password is required
+        </div>
       </div>
     </div><div class="layout__item u-2/10 u-1/1-palm">
       <button type="submit" class="btn u-1/1">Login</button>

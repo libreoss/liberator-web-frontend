@@ -4,6 +4,7 @@ require('angular');
 
 angular.module('Liberator.auth',[
   require('angular-ui-router'),
+  require('angular-messages')
 ])
 
   .config(require('./config'))

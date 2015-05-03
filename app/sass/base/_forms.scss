@@ -9,7 +9,7 @@ input {
     outline: none;
   }
 
-  &[type="text"],
+  &[type="email"],
   &[type="password"] {
     border: none;
     border-bottom: solid 2px $base-color;
@@ -20,4 +20,9 @@ input {
       background: $base-color;
     }
   }
+}
+
+.error {
+  font-size: 1.2rem;
+  color: #f00;
 }
