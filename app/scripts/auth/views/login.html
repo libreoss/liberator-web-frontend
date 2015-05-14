@@ -10,7 +10,7 @@
         <input type="email" ng-model="user.email" name="email" class="u-1/1" required>
         <label for="email">Email</label>
       </div>
-      <div class="error" ng-messages="loginForm.email.$error" role="alert" ng-show="loginForm.email.$touched || (loginForm.$submitted && loginForm.$invalid)">
+      <div class="error" ng-messages="loginForm.email.$touched && loginForm.email.$error" role="alert">
         <div ng-message="email">
           Please enter a valid email address
         </div>
@@ -23,7 +23,7 @@
         <input type="password" ng-model="user.password" name="password" class="u-1/1" required>
         <label for="password">Password</label>
       </div>
-      <div class="error" ng-messages="loginForm.password.$error" role="alert" ng-show="loginForm.password.$touched  || (loginForm.$submitted && loginForm.$invalid)">
+      <div class="error" ng-messages="loginForm.password.$touched && loginForm.password.$error" role="alert">
         <div ng-message="required">
           Password is required
         </div>
