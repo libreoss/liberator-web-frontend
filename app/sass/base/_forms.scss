@@ -23,6 +23,6 @@ input {
 }
 
 .error {
-  font-size: 1.2rem;
-  color: #f00;
+  font-size: $error-font-size;
+  color: $error-color;
 }
