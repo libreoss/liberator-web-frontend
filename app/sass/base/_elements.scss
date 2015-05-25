@@ -19,3 +19,16 @@ a {
 fieldset {
   border: 0;
 }
+
+button {
+  &[disabled] {
+    background-color: $disabled-background-color;
+    border-color: $disabled-border-color;
+    color: $disabled-color;
+    opacity: $disabled-opacity;
+    &:hover {
+      cursor: not-allowed;
+      color: $disabled-color;
+    }
+  }
+}
