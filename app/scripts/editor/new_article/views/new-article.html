@@ -1,0 +1,19 @@
+Title:  <input ng-model="title"  type="text"></input> <br>
+Author: <input ng-model="author" type="text"></input> <br>
+
+<button ng-click="create_new_article(title, author)">click me</button> <br>
+
+<ul>
+    <li ng-repeat="state in states"> {{ state.id }} - {{  state.name }} </li>
+</ul>
+
+<ul>
+    <li ng-repeat="article in articles">
+        {{ article.id }} -
+        <span ng-repeat="user in users | filter:article.author">
+            {{ user.email }}
+        </span>
+    </li>
+</ul>
+
+Status: {{ blah }}

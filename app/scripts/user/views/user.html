@@ -1,0 +1,25 @@
+<table border="1px">
+    <tr>
+        <td>User ID</td>
+        <td>{{ user.id }}</td>
+    </tr>
+
+    <tr>
+        <td>Email</td>
+        <td>{{ user.email }}</td>
+    </tr>
+
+    <tr>
+        <td>Name</td>
+        <td> {{ user.first_name }} {{ user.last_name }} </td>
+    </tr>
+</table>
+
+Articles by this user: <br>
+
+<ul>
+    <li ng-repeat="article in articles">
+        {{ article.title.title }}
+    </li>
+</ul>
+
