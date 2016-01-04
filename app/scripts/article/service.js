@@ -23,10 +23,16 @@ module.exports = [
       return $http.get(API_URL + "articles/");
     }
 
+    function getContents(articleId) 
+    {
+      return $http.get(API_URL + "articles/" + articleId + "/languages/latest/");
+    }
+
     return {
       deleteArticle: deleteArticle,
       readArticle: readArticle,
-      listArticles: listArticles
+      listArticles: listArticles,
+      getContents: getContents,
     };
 
 }]

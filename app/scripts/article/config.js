@@ -7,15 +7,14 @@ module.exports = [
     $stateProvider
       .state('article-list', {
 	      url : '/articles',
-	      //public: true,
 	      templateUrl: 'scripts/article/views/list.html',
-      	controller: 'ArticleController'
-      });
-      /*
-      .state('article.read', {
+      	controller: 'ArticleListController'
+      })
+
+      .state('article-read', {
 	      url: '/articles/:articleId',
-	      public: true,
+      	controller: 'ArticleReadController',
 	      templateUrl: 'scripts/article/views/read.html'
-      })*/
+      });
   }
 ];

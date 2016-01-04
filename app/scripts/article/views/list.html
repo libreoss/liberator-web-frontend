@@ -2,7 +2,7 @@
 <ul>
 
 <li ng-repeat="article in articles">
-	Article: {{ article.id }}
+	<a ui-sref="article-read({articleId: article.id})">Article {{article.id}}</a>
 </li>
 
 </ul>

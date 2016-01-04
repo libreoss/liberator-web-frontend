@@ -4,9 +4,8 @@ module.exports = [
   '$scope',
   'ArticleService',
   '$state',
-  '$stateParams',
 
-  function ArticleController($scope, ArticleService, $state, $stateParams) {
+  function ArticleListController($scope, ArticleService, $state) {
     
     function listArticles() 
     {

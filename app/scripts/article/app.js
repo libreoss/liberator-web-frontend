@@ -9,6 +9,7 @@ angular.module('Liberator.Article',[
 
   .config(require('./config'))
 
-  .controller('ArticleController', require('./controller.js'))
+  .controller('ArticleListController', require('./list-controller.js'))
+  .controller('ArticleReadController', require('./read-controller.js'))
 
   .service('ArticleService', require('./service.js'));
