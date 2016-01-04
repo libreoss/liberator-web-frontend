@@ -13,7 +13,6 @@ module.exports = [
         .then(
           function (response) 
           {
-            console.log(response.data);
             $scope.articles = response.data;
           }
         );

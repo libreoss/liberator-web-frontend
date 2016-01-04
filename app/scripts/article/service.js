@@ -9,7 +9,7 @@ module.exports = [
     
     function deleteArticle(articleId) 
     {
-      return $http.delete(API_URL + "articles/" + articleId);
+      return $http.delete(API_URL + "articles/" + articleId + "/");
     }
 
 
