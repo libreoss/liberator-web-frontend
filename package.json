@@ -7,7 +7,7 @@
     "start": "npm install && parallelshell 'npm run watch' 'npm run serve' 'npm run livereload'",
     "build:js": "browserify app/scripts/app.js > app/dist/liberator.js",
     "build:bootstrap": "cp -rv node_modules/bootstrap/dist/* app/dist/",
-    "build": "npm run build:js && npm run build:bootstrap",
+    "build": "mkdir app/dist -p && npm run build:js && npm run build:bootstrap",
     "clean": "rm -rfv dist/",
     "lint": "jshint **.js",
     "prebuild": "npm run lint",
