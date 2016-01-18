@@ -21,7 +21,7 @@
 
 			<ul>
 				<li ng-repeat="content in contents">
-					<button ng-click="current_content = content">{{content.language.name}}</button>
+					<button ng-click="changeContent(content)">Language {{content.language}}</button>
 				</li>
 			</ul>
 		</p>

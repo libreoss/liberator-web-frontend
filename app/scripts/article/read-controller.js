@@ -8,7 +8,8 @@ module.exports = [
 
   function ArticleReadController($scope, ArticleService, $state, $stateParams) {
     
-    
+    $scope.current_content = {};
+
     ArticleService.readArticle($stateParams.articleId).then(
       function (response) 
       {
@@ -28,6 +29,11 @@ module.exports = [
       ArticleService.deleteArticle(articleId)
         .then(listArticles);
     };
+
+    $scope.changeContent = function(content) 
+    {
+      $scope.current_content = content;
+    }
   }
 ];
 

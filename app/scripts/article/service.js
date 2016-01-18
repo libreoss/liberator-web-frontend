@@ -15,7 +15,7 @@ module.exports = [
 
     function readArticle(articleId) 
     {
-      return $http.get(API_URL + "articles/" + articleId); 
+      return $http.get(API_URL + "articles/" + articleId + "/"); 
     }
 
     function listArticles() 
