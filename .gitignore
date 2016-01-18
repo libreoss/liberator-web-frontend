@@ -9,3 +9,5 @@ node_modules/
 
 css/
 dist/
+
+npm-debug.log

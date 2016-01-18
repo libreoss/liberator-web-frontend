@@ -1,0 +1,30 @@
+
+
+<div class="row"> 
+
+	<div class="col-md-8">
+		<h1>{{current_content.title}}</h1>
+		<p>Authors: 
+			<ul>
+				<li ng-repeat="users in article.authors">{{user.first_name}} {{user.last_name}}</li>
+			</ul>
+		</p>
+
+		<div class="article-content">
+			{{current_content.text}}
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<p>
+			Languages: 
+
+			<ul>
+				<li ng-repeat="content in contents">
+					<button ng-click="current_content = content">{{content.language.name}}</button>
+				</li>
+			</ul>
+		</p>
+	</div>
+
+</div>
