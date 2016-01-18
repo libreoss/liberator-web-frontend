@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm install && parallelshell 'npm run watch' 'npm run serve' 'npm run livereload'",
-    "build:js": "browserify app/scripts/app.js > app/dist/liberator.js",
+    "build:js": "cp node_modules/jquery/dist/* app/dist/ && browserify app/scripts/app.js > app/dist/liberator.js",
     "build:bootstrap": "cp -rv node_modules/bootstrap/dist/* app/dist/",
     "build": "mkdir app/dist -p && npm run build:js && npm run build:bootstrap",
     "clean": "rm -rfv dist/",
@@ -31,6 +31,7 @@
     "bootstrap": "^3.3.6",
     "browserify": "~8.1.3",
     "http-server": "^0.8.5",
+    "jquery": "^2.2.0",
     "jshint": "^2.9.1",
     "live-reload": "^1.1.0",
     "parallelshell": "^2.0.0",
