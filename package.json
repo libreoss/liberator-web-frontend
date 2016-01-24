@@ -13,7 +13,13 @@
     "prebuild": "npm run lint",
     "watch": "watch 'npm run build' ./app/ --filter=watch_filter",
     "serve": "http-server -p 9000 -a 0.0.0.0 ./app/",
-    "livereload": "live-reload ./app/dist/ --port 9001"
+    "livereload": "live-reload ./app/dist/ --port 9001",
+
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update",
+
+    "preprotractor": "npm run update-webdriver",
+    "protractor": "protractor test/e2e/conf.js"
   },
   "repository": {
     "type": "git",

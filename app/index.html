@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="Liberator">
+<html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,16 +10,17 @@
     <link rel="stylesheet" href="/dist/css/bootstrap.css" media="all">
     <script src="dist/jquery.js"></script>
     <script src="dist/js/bootstrap.js"></script>
-    <script src="localhost:9001"></script>
+    <script src="//localhost:9001"></script>
   </head>
-  <body>
+  <body ng-app="Liberator">
 
 	<!-- NAVIGATION -->
 	<nav class="navbar navbar-inverse" role="navigation">
-		<ul class="nav navbar-nav">
-			<li><a ui-sref="home">Home</a></li>
-			<li><a ui-sref="auth.login">Login</a></li>
-			<li><a ui-sref="article-list">List articles</a></li>
+		<ul id="navbar" class="nav navbar-nav">
+			<li><a id="home" ui-sref="home">Home</a></li>
+			<li><a id="login" ui-sref="auth.login">Login</a></li>
+			<li><a id="article-list" ui-sref="article-list">List articles</a></li>
+      <li><a id="new-article" ui-sref="new-article">New article</a></li>
 		</ul>
 	</nav>
 
