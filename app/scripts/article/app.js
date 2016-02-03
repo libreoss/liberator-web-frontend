@@ -4,6 +4,7 @@ require('angular');
 
 angular.module('Liberator.Article',[
   require('angular-ui-router'), // optional dependencies for module
+  require('angular-contenteditable'),
   //require('angular-messages')
 ])
 
