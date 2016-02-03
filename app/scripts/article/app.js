@@ -13,4 +13,8 @@ angular.module('Liberator.Article',[
   .controller('ArticleListController', require('./list-controller.js'))
   .controller('ArticleReadController', require('./read-controller.js'))
 
-  .service('ArticleService', require('./service.js'));
+  .service('ArticleService', require('./service.js'))
+
+  .directive("myEditorArea", require("./editor/my-editor-area.js"))
+  .directive("myEditorAction", require("./editor/my-editor-action.js"))
+  .directive("myEditorEditable", require("./editor/my-editor-editable.js"));
