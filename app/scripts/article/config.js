@@ -15,6 +15,12 @@ module.exports = [
 	      url: '/articles/:articleId',
       	controller: 'ArticleReadController',
 	      templateUrl: 'scripts/article/views/read.html'
-      });
+      })
+      
+      .state('article-create', {
+	      url: '/article-new',
+      	controller: 'ArticleCreateController',
+	      templateUrl: 'scripts/article/views/create.html'
+      })
   }
 ];

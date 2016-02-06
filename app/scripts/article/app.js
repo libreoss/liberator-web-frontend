@@ -6,12 +6,16 @@ angular.module('Liberator.Article',[
   require('angular-ui-router'), // optional dependencies for module
   require('angular-contenteditable'),
   //require('angular-messages')
+  'Liberator.Section',
+  'Liberator.User',
+  'Liberator.Issue',
 ])
 
   .config(require('./config'))
 
   .controller('ArticleListController', require('./list-controller.js'))
   .controller('ArticleReadController', require('./read-controller.js'))
+  .controller('ArticleCreateController', require('./create-controller.js'))
 
   .service('ArticleService', require('./service.js'))
 
