@@ -1,6 +1,10 @@
+'use strict';
+
 module.exports = function(path) {
-  if(path.search("dist") == -1)
+  if(path.search('dist') === -1){
     return true;
-  else
+  }
+  else {
     return false;
+  }
 };
