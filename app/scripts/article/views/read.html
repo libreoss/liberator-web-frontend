@@ -28,3 +28,16 @@
 	</div>
 
 </div>
+
+<div class="row"> 
+	<div class="col-md-8">
+		<h1>Add new content</p>
+	</div>
+	<div class="col-md-4">
+		<ul>
+			<li ng-repeat="language in languages"> 
+				<a ui-sref="add-content({articleId: article.id, languageId: language.id})">{{language.name}}</a>
+			</li>
+		</ul>
+	</div>
+</div>

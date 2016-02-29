@@ -22,5 +22,11 @@ module.exports = [
       	controller: 'ArticleCreateController',
 	      templateUrl: 'scripts/article/views/create.html'
       })
+
+      .state('add-content', {
+        url: '/content-new/:articleId/:languageId/',
+        controller: "AddContentController",
+        templateUrl: "scripts/article/views/add-content.html",
+      })
   }
 ];

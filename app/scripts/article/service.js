@@ -38,12 +38,18 @@ module.exports = [
       });
     }
 
+    function addContent(content) 
+    {
+      return $http.post(API_URL + "contents/", content);
+    }
+
     return {
       deleteArticle: deleteArticle,
       readArticle: readArticle,
       listArticles: listArticles,
       getContents: getContents,
       createArticle: createArticle,
+      addContent: addContent,
     };
 
 }]

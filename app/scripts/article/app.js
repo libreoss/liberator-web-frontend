@@ -16,6 +16,7 @@ angular.module('Liberator.Article',[
   .controller('ArticleListController', require('./list-controller.js'))
   .controller('ArticleReadController', require('./read-controller.js'))
   .controller('ArticleCreateController', require('./create-controller.js'))
+  .controller('AddContentController', require('./add-content-controller.js'))
 
   .service('ArticleService', require('./service.js'))
 

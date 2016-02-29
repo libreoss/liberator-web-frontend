@@ -5,8 +5,9 @@ module.exports = [
   'ArticleService',
   '$state',
   '$stateParams',
+  'LanguageService',
 
-  function ArticleReadController($scope, ArticleService, $state, $stateParams) {
+  function ArticleReadController($scope, ArticleService, $state, $stateParams, LanguageService) {
     
     $scope.current_content = {};
 
@@ -23,6 +24,13 @@ module.exports = [
         $scope.contents = response.data;
       }
     );
+
+    LanguageService.listLanguages().then(
+      function (response) 
+      {
+        $scope.languages = response.data;
+      }
+    )
 
     $scope.articleDelete = function(articleId) 
     {
