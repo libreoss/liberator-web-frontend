@@ -8,13 +8,25 @@ module.exports = [
   'LanguageService',
 
   function AddContentController($scope, $state, $stateParams, ArticleService, LanguageService) {
-    $scope.content = {
-      article: $stateParams.articleId,
-      language: $stateParams.languageId,
-      title: "",
-      text: "",
-      state: 1,
-    }; 
+    ArticleService.getContents($stateParams.articleId).then(
+      function (response) 
+      {
+        $scope.content = {
+          article: $stateParams.articleId,
+          language: $stateParams.languageId,
+          title: "",
+          text: "",
+          state: 1,
+        }; 
+        for (var i = 0; i<response.data.length; i++) 
+        {
+          if (response.data[i].language == $stateParams.languageId) 
+          {
+            $scope.content = response.data[i];
+          }
+        }
+      }
+    );
 
     $scope.save = function() 
     {
