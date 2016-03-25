@@ -14,4 +14,17 @@
 
 </my-editor-area>
 
+<div id="state-list">
+
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{ current_state.name }}
+  </button>
+  <ul class="dropdown-menu">
+    <li ng-repeat="state in states"><a href="#" ng-click="changeState(state)">{{ state.name }}</a></li>
+  </ul>
+</div>
+
+</div>
+
 <button ng-click="save()" type="button" class="btn btn-default">Save</button>

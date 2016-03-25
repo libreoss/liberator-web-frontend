@@ -7,6 +7,7 @@ require('./section/app.js');
 require('./user/app.js');
 require('./issue/app.js');
 require('./language/app.js');
+require('./state/app.js');
 /**
  *
  */
@@ -18,6 +19,7 @@ angular.module('Liberator', [
     'Liberator.User',
     'Liberator.Issue',
     'Liberator.Language',
+    'Liberator.State',
   ])
 
   .config(require('./config.js'))
