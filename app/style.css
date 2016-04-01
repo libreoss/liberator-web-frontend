@@ -7,3 +7,10 @@
 	border-style: solid; 
 	display: block;
 }
+
+.article_item 
+{
+	padding: 5px; 
+	background-color: #ccffff;
+	margin: 5px;
+}

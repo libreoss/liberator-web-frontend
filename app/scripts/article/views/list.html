@@ -1,9 +1,7 @@
 
 <ul>
 
-<li ng-repeat="article in articles">
-	<a ui-sref="article-read({articleId: article.id})">Article {{article.id}}</a>
-	<button ng-click="articleDelete(article.id)">Remove this article</button>
-</li>
+<my-article-item ng-repeat="article in articles" article-id="{{ article.id }}" />
+
 
 </ul>

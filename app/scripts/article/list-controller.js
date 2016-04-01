@@ -17,12 +17,6 @@ module.exports = [
           }
         );
     }
-    
-    $scope.articleDelete = function(articleId) 
-    {
-      ArticleService.deleteArticle(articleId)
-        .then(listArticles);
-    }
 
     listArticles();
   }

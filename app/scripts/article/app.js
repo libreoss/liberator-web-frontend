@@ -22,4 +22,6 @@ angular.module('Liberator.Article',[
 
   .directive("myEditorArea", require("./editor/my-editor-area.js"))
   .directive("myEditorAction", require("./editor/my-editor-action.js"))
-  .directive("myEditorEditable", require("./editor/my-editor-editable.js"));
+  .directive("myEditorEditable", require("./editor/my-editor-editable.js"))
+
+  .directive("myArticleItem", require("./directive.js"));

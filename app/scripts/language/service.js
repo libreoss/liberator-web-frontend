@@ -10,8 +10,14 @@ module.exports = [
     {
       return $http.get(API_URL + "languages/");
     }
+
+    function readLanguage(languageId) 
+    {
+      return $http.get(API_URL + "languages/" + languageId + "/");
+    }
     return {
       listLanguages: listLanguages,
+      readLanguage: readLanguage,
     };
 
 }]
