@@ -10,11 +10,12 @@ module.exports = [
   function ArticleReadController($scope, ArticleService, $state, $stateParams, LanguageService) {
     
     $scope.content = {};
+    $scope.article = {};
 
     ArticleService.readArticle($stateParams.articleId).then(
       function (response) 
       {
-        $scope.article = response.data
+        $scope.article = response.data;
       }
     );
 
