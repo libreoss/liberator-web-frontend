@@ -24,6 +24,10 @@ module.exports = [
       },
       controller: function ($scope, $compile)
       {
+        LanguageService.listLanguages().then(function (response) 
+        {
+          $scope.languages = response.data; 
+        });
         ArticleService.readArticle($scope.articleId).then(function (response) 
         {
           $scope.article = response.data;
