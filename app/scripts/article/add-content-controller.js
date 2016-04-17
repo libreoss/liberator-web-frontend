@@ -61,6 +61,7 @@ module.exports = [
       {
         $state.go("article-read", {
           articleId: $scope.content.article,
+          languageId: $scope.content.language
         });
       });
     }

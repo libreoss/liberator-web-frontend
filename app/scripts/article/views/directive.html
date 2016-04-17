@@ -3,8 +3,9 @@
 
 	<ul>
 		<li ng-repeat="content in contents">
-			<a ui-sref="article-read({articleId: article.id})">{{content.language.name}}: {{content.title}}</a>
+			<a ui-sref="article-read({articleId: article.id, languageId: content.language.id})">{{content.language.name}}: {{content.title}}</a>
 			- {{ content.state.name }}
+			<a ui-sref="add-content({articleId: article.id, languageId: content.language.id})">Update</a>
 		</li>
 	</ul>
 	<button ng-click="articleDelete()">Remove this article</button>

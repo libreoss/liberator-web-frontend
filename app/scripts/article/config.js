@@ -12,7 +12,7 @@ module.exports = [
       })
 
       .state('article-read', {
-	      url: '/articles/:articleId',
+	      url: '/articles/:articleId/:languageId',
       	controller: 'ArticleReadController',
 	      templateUrl: 'scripts/article/views/read.html'
       })

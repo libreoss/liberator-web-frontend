@@ -9,7 +9,7 @@ module.exports = [
 
   function ArticleReadController($scope, ArticleService, $state, $stateParams, LanguageService) {
     
-    $scope.current_content = {};
+    $scope.content = {};
 
     ArticleService.readArticle($stateParams.articleId).then(
       function (response) 
@@ -21,16 +21,16 @@ module.exports = [
     ArticleService.getContents($stateParams.articleId).then(
       function (response) 
       {
-        $scope.contents = response.data;
+        // find content for selected language 
+        for (var i = 0; i<response.data.length; i++) 
+        {
+          if (response.data[i].language == $stateParams.languageId) 
+          {
+            $scope.content = response.data[i];
+          }
+        }
       }
     );
-
-    LanguageService.listLanguages().then(
-      function (response) 
-      {
-        $scope.languages = response.data;
-      }
-    )
 
     $scope.articleDelete = function(articleId) 
     {
@@ -38,10 +38,6 @@ module.exports = [
         .then(listArticles);
     };
 
-    $scope.changeContent = function(content) 
-    {
-      $scope.current_content = content;
-    }
   }
 ];
 

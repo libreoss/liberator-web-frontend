@@ -3,7 +3,7 @@
 <div class="row"> 
 
 	<div class="col-md-8">
-		<h1>{{current_content.title}}</h1>
+		<h1>{{content.title}}</h1>
 		<p>Authors: 
 			<ul>
 				<li ng-repeat="users in article.authors">{{user.first_name}} {{user.last_name}}</li>
@@ -11,33 +11,10 @@
 		</p>
 
 		<div class="article-content">
-			{{current_content.text}}
+			{{content.text}}
 		</div>
 	</div>
 
-	<div class="col-md-4">
-		<p>
-			Languages: 
-
-			<ul>
-				<li ng-repeat="content in contents">
-					<button ng-click="changeContent(content)">Language {{content.language}}</button>
-				</li>
-			</ul>
-		</p>
-	</div>
 
 </div>
 
-<div class="row"> 
-	<div class="col-md-8">
-		<h1>Add new content</p>
-	</div>
-	<div class="col-md-4">
-		<ul>
-			<li ng-repeat="language in languages"> 
-				<a ui-sref="add-content({articleId: article.id, languageId: language.id})">{{language.name}}</a>
-			</li>
-		</ul>
-	</div>
-</div>
