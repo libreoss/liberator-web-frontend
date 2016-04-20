@@ -6,16 +6,26 @@ module.exports = [
   '$state',
   '$stateParams',
   'LanguageService',
+  'UserService',
 
-  function ArticleReadController($scope, ArticleService, $state, $stateParams, LanguageService) {
+  function ArticleReadController($scope, ArticleService, $state, $stateParams, LanguageService, UserService) {
     
     $scope.content = {};
     $scope.article = {};
+    $scope.authors = [];
 
     ArticleService.readArticle($stateParams.articleId).then(
       function (response) 
       {
         $scope.article = response.data;
+        angular.forEach($scope.article.authors, function (author, key)
+        {
+          UserService.readUser(author).then(function (response) 
+          {
+            console.log(response.data);
+            $scope.authors.push(response.data);
+          });
+        });
       }
     );
 

@@ -11,7 +11,7 @@
 		<h1>{{content.title}}</h1>
 		<p>Authors: 
 			<ul>
-				<li ng-repeat="users in article.authors">{{user.first_name}} {{user.last_name}}</li>
+				<li ng-repeat="author in authors">{{author.first_name}} {{author.last_name}} - {{author.email}}</li>
 			</ul>
 		</p>
 

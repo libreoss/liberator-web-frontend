@@ -10,8 +10,13 @@ module.exports = [
     {
       return $http.get(API_URL + "users/");
     }
+    function readUser(userId) 
+    {
+      return $http.get(API_URL + "users/" + userId + "/");
+    }
     return {
       listUsers: listUsers,
+      readUser: readUser,
     };
 
 }]
