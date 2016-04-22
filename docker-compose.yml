@@ -1,0 +1,7 @@
+web:
+  build: .
+  ports:
+   - "80:9000"
+  command: npm start
+  volumes:
+   - .:/code
