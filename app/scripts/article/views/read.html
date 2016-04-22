@@ -1,30 +1,24 @@
 
+<div class="row">
+
+	<my-article-item ng-if="article.id != null" article-id="{{ article.id }}" />
+
+</div>
 
 <div class="row"> 
 
 	<div class="col-md-8">
-		<h1>{{current_content.title}}</h1>
+		<h1>{{content.title}}</h1>
 		<p>Authors: 
 			<ul>
-				<li ng-repeat="users in article.authors">{{user.first_name}} {{user.last_name}}</li>
+				<li ng-repeat="author in authors">{{author.first_name}} {{author.last_name}} - {{author.email}}</li>
 			</ul>
 		</p>
 
-		<div class="article-content">
-			{{current_content.text}}
+		<div class="article-content" ng-bind-html="content.text">
 		</div>
 	</div>
 
-	<div class="col-md-4">
-		<p>
-			Languages: 
-
-			<ul>
-				<li ng-repeat="content in contents">
-					<button ng-click="changeContent(content)">Language {{content.language}}</button>
-				</li>
-			</ul>
-		</p>
-	</div>
 
 </div>
+

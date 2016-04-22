@@ -28,11 +28,28 @@ module.exports = [
       return $http.get(API_URL + "articles/" + articleId + "/languages/latest/");
     }
 
+    function createArticle(article) 
+    {
+      return $http.post(API_URL + "articles/", 
+      {
+        authors: article.authors,
+        section: article.section,
+        issues: article.issues,
+      });
+    }
+
+    function addContent(content) 
+    {
+      return $http.post(API_URL + "contents/", content);
+    }
+
     return {
       deleteArticle: deleteArticle,
       readArticle: readArticle,
       listArticles: listArticles,
       getContents: getContents,
+      createArticle: createArticle,
+      addContent: addContent,
     };
 
 }]

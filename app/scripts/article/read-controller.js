@@ -5,22 +5,41 @@ module.exports = [
   'ArticleService',
   '$state',
   '$stateParams',
+  'LanguageService',
+  'UserService',
 
-  function ArticleReadController($scope, ArticleService, $state, $stateParams) {
+  function ArticleReadController($scope, ArticleService, $state, $stateParams, LanguageService, UserService) {
     
-    $scope.current_content = {};
+    $scope.content = {};
+    $scope.article = {};
+    $scope.authors = [];
 
     ArticleService.readArticle($stateParams.articleId).then(
       function (response) 
       {
-        $scope.article = response.data
+        $scope.article = response.data;
+        angular.forEach($scope.article.authors, function (author, key)
+        {
+          UserService.readUser(author).then(function (response) 
+          {
+            console.log(response.data);
+            $scope.authors.push(response.data);
+          });
+        });
       }
     );
 
     ArticleService.getContents($stateParams.articleId).then(
       function (response) 
       {
-        $scope.contents = response.data;
+        // find content for selected language 
+        for (var i = 0; i<response.data.length; i++) 
+        {
+          if (response.data[i].language == $stateParams.languageId) 
+          {
+            $scope.content = response.data[i];
+          }
+        }
       }
     );
 
@@ -30,10 +49,6 @@ module.exports = [
         .then(listArticles);
     };
 
-    $scope.changeContent = function(content) 
-    {
-      $scope.current_content = content;
-    }
   }
 ];
 

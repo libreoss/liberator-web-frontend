@@ -12,9 +12,21 @@ module.exports = [
       })
 
       .state('article-read', {
-	      url: '/articles/:articleId',
+	      url: '/articles/:articleId/:languageId',
       	controller: 'ArticleReadController',
 	      templateUrl: 'scripts/article/views/read.html'
-      });
+      })
+      
+      .state('article-create', {
+	      url: '/article-new',
+      	controller: 'ArticleCreateController',
+	      templateUrl: 'scripts/article/views/create.html'
+      })
+
+      .state('add-content', {
+        url: '/content-new/:articleId/:languageId/',
+        controller: "AddContentController",
+        templateUrl: "scripts/article/views/add-content.html",
+      })
   }
 ];
