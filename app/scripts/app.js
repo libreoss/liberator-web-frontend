@@ -1,6 +1,7 @@
 'use strict';
 
 require('angular');
+
 require('./auth/app.js');
 require('./article/app.js');
 require('./section/app.js');
@@ -13,6 +14,7 @@ require('./state/app.js');
  */
 angular.module('Liberator', [
     require('angular-ui-router'),
+    require('angular-sanitize'),
     'Liberator.auth',
     'Liberator.Article',
     'Liberator.Section',
