@@ -2,7 +2,9 @@
 
 module.exports = [
   '$stateProvider',
-  function authConfig($stateProvider) {
+  '$httpProvider',
+  function authConfig($stateProvider, $httpProvider) {
+    $httpProvider.interceptors.push('authInterceptor');
 
     $stateProvider
       .state('auth', {
@@ -22,4 +24,3 @@ module.exports = [
       });
   }
 ];
-
