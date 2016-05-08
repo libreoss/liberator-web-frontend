@@ -21,6 +21,10 @@ module.exports = [
         url: '/reset-password',
         public: true,
         templateUrl: 'scripts/auth/views/forgot-password.html'
+      })
+      .state('auth.logout', {
+        url: '/logout',
+        templateUrl: 'scripts/auth/views/logout.html',
       });
   }
 ];
