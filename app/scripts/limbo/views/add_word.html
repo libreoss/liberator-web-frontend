@@ -1,0 +1,12 @@
+
+<div class="limbo-add-words">
+
+	<input width="30px" type="text" ng-model="word" />
+	<button ng-click="add()" class="btn btn-default" type="button">Add</button>
+	<ul>
+		<li ng-repeat="w in words">{{ w }}</li>
+	</ul>
+
+	<button ng-click="submit()" type="button" class="btn btn-primary">Submit</button>
+
+</div>
