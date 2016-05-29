@@ -9,6 +9,7 @@ module.exports = [
       scope: {
         word: "@",
         username: "@",
+        wrong: "=",
       },
       link: function(scope, elem, attrs) 
       {

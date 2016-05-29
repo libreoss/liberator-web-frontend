@@ -6,9 +6,11 @@ module.exports = [
   '$state',
   '$stateParams',
   'ArticleService',
+  'LimboService',
 
-  function LimboCheckController($scope, $state, $stateParams, ArticleService) {
+  function LimboCheckController($scope, $state, $stateParams, ArticleService, LimboService) {
     $scope.content;
+    $scope.username = $stateParams.username;
 
     ArticleService.getContents($stateParams.articleId).then(
       function (response) 
@@ -23,8 +25,36 @@ module.exports = [
               .replace(/<\/?([ibp]|div)>/g, "")
               .replace(/<(code|pre)>.*<\/(code|pre)>/g, "")
               .replace(/&nbsp;/g, "");
-            $scope.words = $scope.content.text.split(" ");
-            console.log($scope.words);
+            var words_ = $scope.content.text.split(" ");
+            var words = [];
+            // remove empty items 
+            for (var i = 0; i<words_.length; i++) 
+            {
+              if (words_[i] != "") 
+              {
+                words.push(words_[i]);
+              }
+            }
+            $scope.words = [];
+            LimboService.init($scope.username);
+            LimboService.check(words).then(function (response) 
+            {
+              var checked = response.data["words"];
+              // add result to $scope.words 
+              console.log(words);
+              for (var i = 0; i<words.length; i++) 
+              {
+                // for eahc word find it in checked words and add to res 
+                for (var j = 0; j<checked.length; j++) 
+                {
+                  if (words[i] == checked[j].word) 
+                  {
+                    $scope.words.push(checked[j]);
+                  }
+                }
+              }
+              console.log($scope.words);
+            });
           }
         }
       }

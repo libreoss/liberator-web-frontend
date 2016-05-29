@@ -12,7 +12,7 @@ module.exports = [
       })
 
       .state('limbo-check', {
-	      url : '/limbo/check/:articleId/:languageId/',
+	      url : '/limbo/check/:username/:articleId/:languageId/',
 	      templateUrl: 'scripts/limbo/views/check.html',
       	controller: 'LimboCheckController'
       })
