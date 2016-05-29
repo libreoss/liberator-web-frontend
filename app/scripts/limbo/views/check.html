@@ -1,2 +1,2 @@
 
-<limbo-suggest-words ng-repeat="word in words" word="{{ word }}" username="admin@liberator.org" />
+<limbo-suggest-words ng-repeat="word in words track by $index" word="{{ word }}" username="admin@liberator.org" />

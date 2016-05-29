@@ -19,7 +19,12 @@ module.exports = [
           if (response.data[i].language == $stateParams.languageId) 
           {
             $scope.content = response.data[i];
+            $scope.content.text = $scope.content.text.replace(/([<&])/g, " $1").replace(/([>;])/g,  "$1 ")
+              .replace(/<\/?([ibp]|div)>/g, "")
+              .replace(/<(code|pre)>.*<\/(code|pre)>/g, "")
+              .replace(/&nbsp;/g, "");
             $scope.words = $scope.content.text.split(" ");
+            console.log($scope.words);
           }
         }
       }
