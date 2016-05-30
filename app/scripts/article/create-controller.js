@@ -47,7 +47,7 @@ module.exports = [
       {
         if ($scope.article.authors[i] == author.id) 
         {
-          delete $scope.article.authors[i];
+          $scope.article.authors.splice(i,1);
         }
       }
     };
@@ -65,7 +65,7 @@ module.exports = [
       {
         if ($scope.article.issues[i] == issue.id) 
         {
-          delete $scope.article.issues[i];
+          $scope.article.issues.splice(i,1);
         }
       }
     };
