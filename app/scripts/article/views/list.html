@@ -1,7 +1,23 @@
 
+<div class="col-md-4">
+Section:
+<div class="row">
+<section-selector selected="selected_section" />
+</div>
+
+<div class="row">
+Issue:
+<issue-selector selected="selected_issue" />
+</div>
+
+</div>
+
+
+<div class="col-md-8">
 <ul>
 
 <my-article-item ng-repeat="article in articles" article-id="{{ article.id }}" />
 
-
 </ul>
+
+</div>
