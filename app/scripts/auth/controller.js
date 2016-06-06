@@ -17,6 +17,7 @@ module.exports = [
       loginService.logIn($scope.user)
       .then(
         function loginSuccess() {
+          $scope.$parent.username = $scope.user.email;
           // if login is sucessful, redirect to home
           $state.go('home');
         }

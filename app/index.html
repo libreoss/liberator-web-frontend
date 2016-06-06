@@ -14,7 +14,7 @@
     <script src="localhost:9001"></script>
 
   </head>
-  <body>
+  <body ng-controller="AppController">
 
 	<!-- NAVIGATION -->
 	<nav class="navbar navbar-inverse" role="navigation">
@@ -23,7 +23,8 @@
 			<li><a ui-sref="auth.login">Login</a></li>
 			<li><a ui-sref="article-list">List articles</a></li>
 			<li><a ui-sref="article-create">Create article</a></li>
-			<li><a ui-sref="limbo">Dictionary managment</a></li>
+			<li><a ui-sref="limbo-main">Dictionary managment</a></li>
+			<li><a href="">{{ username }}</a></li>
 		</ul>
 	</nav>
 
