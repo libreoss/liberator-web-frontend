@@ -24,6 +24,7 @@ module.exports = [
       return $http.post(API_URL + 'auth/', user)
         .then(function(response) {
           authenticate(response.data.token);
+          $window.sessionStorage.user = user;
         });
     }
 

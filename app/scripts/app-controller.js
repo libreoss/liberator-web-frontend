@@ -2,6 +2,7 @@
 
 module.exports = [
   '$scope',
-  function AppController($scope) {
+  '$window',
+  function AppController($scope, $window) {
     $scope.greeting = 'Hello from scope';
   } ];

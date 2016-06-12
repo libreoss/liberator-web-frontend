@@ -29,24 +29,23 @@ module.exports = [
             $scope.content = response.data[i];
           }
         }
+        // get all available states to fill the state list in dropdown menu
+        $scope.states = []
+        StateService.listStates().then(function (response) 
+        {
+          $scope.states = response.data;
+          
+          // find our current state and set current_state variable
+          for (var i=0; i<response.data.length; i++) 
+          {
+            if ($scope.content.state == response.data[i].id) 
+            {
+              $scope.current_state = response.data[i];
+            }
+          }
+        });
       }
     );
-    
-    // get all available states to fill the state list in dropdown menu
-    $scope.states = []
-    StateService.listStates().then(function (response) 
-    {
-      $scope.states = response.data;
-      
-      // find our current state and set current_state variable
-      for (var i=0; i<response.data.length; i++) 
-      {
-        if ($scope.content.state == response.data[i].id) 
-        {
-          $scope.current_state = response.data[i];
-        }
-      }
-    });
 
     $scope.changeState = function (newstate) 
     {

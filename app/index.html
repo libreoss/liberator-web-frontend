@@ -14,16 +14,17 @@
     <script src="localhost:9001"></script>
 
   </head>
-  <body>
+  <body ng-controller="AppController">
 
 	<!-- NAVIGATION -->
 	<nav class="navbar navbar-inverse" role="navigation">
 		<ul class="nav navbar-nav">
 			<li><a ui-sref="home">Home</a></li>
-			<li><a ui-sref="auth.login">Login</a></li>
+			<li ng-if="!username"><a ui-sref="auth.login">Login</a></li>
+			<li ng-if="username"><a ui-sref="auth.logout">Log Out</a></li>
 			<li><a ui-sref="article-list">List articles</a></li>
 			<li><a ui-sref="article-create">Create article</a></li>
-			<li><a ui-sref="limbo">Dictionary managment</a></li>
+			<li><a ui-sref="limbo-main">Dictionary managment</a></li>
 		</ul>
 	</nav>
 
