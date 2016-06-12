@@ -20,11 +20,10 @@
 	<nav class="navbar navbar-inverse" role="navigation">
 		<ul class="nav navbar-nav">
 			<li><a ui-sref="home">Home</a></li>
-			<li><a ui-sref="auth.login">Login</a></li>
+			<li ng-if="!username"><a ui-sref="auth.login">Login</a></li>
 			<li><a ui-sref="article-list">List articles</a></li>
 			<li><a ui-sref="article-create">Create article</a></li>
 			<li><a ui-sref="limbo-main">Dictionary managment</a></li>
-			<li><a href="">{{ username }}</a></li>
 		</ul>
 	</nav>
 
