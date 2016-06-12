@@ -26,6 +26,7 @@ module.exports = [
 
     $scope.logOut = function(){
         loginService.logOut();
+        $scope.$parent.username = "";
         $state.go('auth.login');
     }
   }
