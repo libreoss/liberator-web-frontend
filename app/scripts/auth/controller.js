@@ -23,5 +23,10 @@ module.exports = [
         }
       );
     };
+
+    $scope.logOut = function(){
+        loginService.logOut();
+        $state.go('auth.login');
+    }
   }
 ];
