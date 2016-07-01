@@ -14,9 +14,16 @@ module.exports = [
     {
       return $http.get(API_URL + "users/" + userId + "/");
     }
+
+    function createUser(user) 
+    {
+      return $http.post(API_URL + "users/", user);
+    }
+
     return {
       listUsers: listUsers,
       readUser: readUser,
+      createUser: createUser,
     };
 
 }]
