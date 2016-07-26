@@ -11,3 +11,5 @@ css/
 dist/
 
 npm-debug.log
+
+tests/__pycache__/
