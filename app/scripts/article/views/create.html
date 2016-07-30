@@ -20,15 +20,14 @@
 			</div>
 		</div>
 	</div>
-
-	<ul>
+	<ul id="section-selector">
 		<li ng-repeat="section in sections">
 			{{section.name}}
 			<button ng-click="setSection(section)">Set as section</button>
 		</li>
 	</ul>
 
-	<ul>
+	<ul id="author-selector">
 		<li ng-repeat="author in authors">
 			{{author.first_name}} {{author.last_name}} {{author.email}}
 			<button ng-show="!author.added" ng-click="addAuthor(author)">Add</button>
@@ -36,7 +35,7 @@
 		</li>
 	</ul>
 
-	<ul>
+	<ul id="issue-selector">
 		<li ng-repeat="issue in issues">
 			{{issue.name}}
 			<button ng-show="!issue.added" ng-click="addIssue(issue)">Add</button>
@@ -45,5 +44,5 @@
 	</ul>
 	
 
-	<button ng-click="save()">Save</button>
+	<button id="submit" ng-click="save()">Save</button>
 </div>
