@@ -9,6 +9,7 @@ angular.module('Liberator.Article',[
   'Liberator.Section',
   'Liberator.User',
   'Liberator.Issue',
+  'Liberator.Media'
 ])
 
   .config(require('./config'))
