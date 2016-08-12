@@ -3,3 +3,12 @@
 <input type = "file" file-model = "myFile"/>
 <button ng-click = "uploadFile()">upload me</button>
 
+<div class="row" ng-repeat="chunk in media"> 
+
+	<div class="col-md-3" ng-repeat="item in chunk">
+		<a href="{{item.url}}">
+			<img width=20 height=20 src="{{item.url}}" alt="{{item.url}}"/>
+		</a>
+	</div>
+
+</div>
