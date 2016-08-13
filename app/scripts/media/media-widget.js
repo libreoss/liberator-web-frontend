@@ -4,8 +4,8 @@
 module.exports = [
   'MediaService',
   '$state',
-  'API_URL',
-  function (MediaService, $state, API_URL) {
+  'BACKEND_URL',
+  function (MediaService, $state, BACKEND_URL) {
     return {
       scope: {
         article: "="
@@ -22,7 +22,7 @@ module.exports = [
             for (var i = 0; i<response.data.length; i++) 
             {
               var item = response.data[i];
-              item.url = API_URL + item.url;
+              item.url = BACKEND_URL + item.url;
               row.push(item);
               if (i%4 == 3) {
                 $scope.media.push(row);
