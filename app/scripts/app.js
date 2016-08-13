@@ -32,6 +32,8 @@ angular.module('Liberator', [
 
   .controller('AppController', require('./app-controller.js'))
 
-  .constant('API_URL', 'http://0.0.0.0:8000/api/v1/');
+  .constant('API_URL', 'http://0.0.0.0:8000/api/v1/')
+
+  .constant("BACKEND_URL", "http://0.0.0.0:8000/");
 
 
