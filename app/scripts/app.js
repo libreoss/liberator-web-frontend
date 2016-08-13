@@ -11,6 +11,7 @@ require('./language/app.js');
 require('./state/app.js');
 require("./limbo/app.js");
 require("./media/app.js")
+require("./comment/app.js");
 /**
  *
  */
@@ -25,7 +26,8 @@ angular.module('Liberator', [
     'Liberator.Language',
     'Liberator.State',
     'Liberator.Limbo',
-    'Liberator.Media'
+    'Liberator.Media',
+    'Liberator.Comment'
   ])
 
   .config(require('./config.js'))
