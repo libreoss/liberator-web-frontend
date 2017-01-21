@@ -35,5 +35,5 @@ class TestLogin(unittest.TestCase):
         submit = self.driver.find_element_by_tag_name("button")
         submit.click()
         sleep(2)
-        self.assertIn("Hello from scope", self.driver.page_source)
+        self.assertIn("Welcome to Liberator!", self.driver.page_source)
 
