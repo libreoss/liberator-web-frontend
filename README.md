@@ -24,3 +24,11 @@ your browser to `https://localhost:9000`. You'll need to accept SSL certificate
 we use for development first.
 
 For contributing, see [Contributing guidelines](CONTRIBUTING.md).
+
+### Deployment 
+
+Change `API_URL` constant for your network settings in app/scripts/app.js and then run 
+
+   - `docker-compose up`
+
+to run frontend serving web server. It will serve on port 80 so you can access it through http://localhost:80

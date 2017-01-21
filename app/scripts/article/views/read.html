@@ -1,0 +1,31 @@
+
+<a ui-sref="limbo-check({articleId: article.id, languageId: content.language, username: 'admin@liberator.org'})">Check spelling</a>
+<div class="row">
+
+	<my-article-item ng-if="article.id != null" article-id="{{ article.id }}" />
+
+</div>
+
+<div class="row"> 
+
+	<div class="col-md-8">
+		<h1>{{content.title}}</h1>
+		<p>Authors: 
+			<ul>
+				<li ng-repeat="author in authors">{{author.first_name}} {{author.last_name}} - {{author.email}}</li>
+			</ul>
+		</p>
+
+		<div class="article-content" ng-bind-html="content.text">
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<media-widget article="article">
+		</media-widget>
+	</div>
+
+
+</div>
+
+<article-comments article="article" />

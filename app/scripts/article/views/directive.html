@@ -1,0 +1,23 @@
+
+<div class="article_item">
+
+	<ul class="content-list">
+		<li ng-repeat="content in contents" ng-if="content.language != null">
+			<a ui-sref="article-read({articleId: article.id, languageId: content.language.id})">{{content.language.name}}: {{content.title}}</a>
+			- {{ content.state.name }}
+			<a ui-sref="add-content({articleId: article.id, languageId: content.language.id})">Update</a>
+		</li>
+	</ul>
+	<button ng-click="articleDelete()">Remove this article</button>
+	<div class="btn-group">
+      		<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+        		Create/Modify content
+      		</a>
+      		<ul class="dropdown-menu">
+        		<li ng-repeat="language in languages">
+				<a ui-sref="add-content({articleId: article.id, languageId: language.id})">{{language.name}}</a>
+			</li>
+      		</ul>
+    	</div>
+
+</div>

@@ -4,8 +4,16 @@
   "description": "Angularjs powered frontend for Liberator project <https://github.com/libreoss/liberator>",
   "main": "index.js",
   "scripts": {
-    "test": "npm test",
-    "start": "npm install && gulp"
+    "start": "npm install && parallelshell 'npm run watch' 'npm run serve' 'npm run livereload'",
+    "build:js": "cp node_modules/jquery/dist/* app/dist/ && browserify app/scripts/app.js > app/dist/liberator.js",
+    "build:bootstrap": "cp -rv node_modules/bootstrap/dist/* app/dist/",
+    "build": "mkdir app/dist -p && npm run build:js && npm run build:bootstrap",
+    "clean": "rm -rfv dist/",
+    "lint": "jshint **.js",
+    "prebuild": "npm run lint",
+    "watch": "watch 'npm run build' ./app/ --filter=watch_filter",
+    "serve": "http-server -p 9000 -a 0.0.0.0 ./app/",
+    "livereload": "live-reload ./app/dist/ --port 9001"
   },
   "repository": {
     "type": "git",
@@ -18,27 +26,17 @@
   },
   "devDependencies": {
     "angular": "~1.3.11",
-    "angular-ui-router": "~0.2.13",
     "angular-messages": "~1.3.15",
+    "angular-ui-router": "~0.2.13",
+    "angular-sanitize": "~1.3.11",
+    "angular-contenteditable": "~0.0.2",
+    "bootstrap": "^3.3.6",
     "browserify": "~8.1.3",
-    "gulp": "~3.8.10",
-    "gulp-autoprefixer": "~2.1.0",
-    "gulp-browserify": "^0.5.1",
-    "gulp-sass": "~1.3.2",
-    "gulp-sourcemaps": "~1.3.0",
-    "gulp-uglify": "~1.1.0",
-    "gulp-webserver": "~0.9.0",
-    "inuit-buttons": "^0.2.2",
-    "inuit-layout": "~0.2.2",
-    "inuit-responsive-settings": "^0.1.5",
-    "inuit-responsive-spacing": "0.0.6",
-    "inuit-responsive-tools": "^0.1.3",
-    "inuit-responsive-widths": "^0.2.2",
-    "inuit-spacing": "~0.7.0",
-    "inuit-starter-kit": "~0.2.9",
-    "inuit-tools-widths": "^0.1.3",
-    "inuit-widths": "~0.4.2",
-    "vinyl-buffer": "~1.0.0",
-    "vinyl-source-stream": "~1.0.0"
+    "http-server": "^0.8.5",
+    "jquery": "^2.2.0",
+    "jshint": "^2.9.1",
+    "live-reload": "^1.1.0",
+    "parallelshell": "^2.0.0",
+    "watch": "^0.17.1"
   }
 }

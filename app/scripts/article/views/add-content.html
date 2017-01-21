@@ -1,0 +1,30 @@
+
+
+<div class="input-group">
+  <p>Title of the article</p>
+  <input ng-model="content.title" type="text" class="form-control" placeholder="Title" aria-describedby="basic-addon2">
+</div>
+
+<my-editor-area> 
+
+<my-editor-action title="I" command="italic" />
+<my-editor-action title="B" command="bold" />
+
+<my-editor-editable content="content.text" />
+
+</my-editor-area>
+
+<div id="state-list">
+
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{ current_state.name }}
+  </button>
+  <ul class="dropdown-menu">
+    <li ng-repeat="state in states"><a href="#" ng-click="changeState(state)">{{ state.name }}</a></li>
+  </ul>
+</div>
+
+</div>
+
+<button id="submit" ng-click="save()" type="button" class="btn btn-default">Save</button>

@@ -2,6 +2,7 @@
 
 module.exports = [
   '$scope',
-  function AppController($scope) {
-    $scope.greeting = 'Hello from scope';
+  '$window',
+  function AppController($scope, $window) {
+    $scope.greeting = 'Welcome to Liberator!';
   } ];

@@ -1,0 +1,48 @@
+
+
+
+<div class="container">
+
+	<div class="row">
+		<div class="jumbotron">
+			<div class="md-col-6">
+				<p> Section: {{article.section}}</p>
+				<p>Authors:</p>
+				<ul> 
+					<li ng-repeat="author in article.authors">{{author}}</li>
+				</ul>
+			</div>
+			<div class="md-col-6">
+				<p>Issues</p>
+				<ul>
+					<li ng-repeat="issue in article.issues">{{issue}}</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<ul id="section-selector">
+		<li ng-repeat="section in sections">
+			{{section.name}}
+			<button ng-click="setSection(section)">Set as section</button>
+		</li>
+	</ul>
+
+	<ul id="author-selector">
+		<li ng-repeat="author in authors">
+			{{author.first_name}} {{author.last_name}} {{author.email}}
+			<button ng-show="!author.added" ng-click="addAuthor(author)">Add</button>
+			<button ng-show="author.added" ng-click="removeAuthor(author)">Remove</button>
+		</li>
+	</ul>
+
+	<ul id="issue-selector">
+		<li ng-repeat="issue in issues">
+			{{issue.name}}
+			<button ng-show="!issue.added" ng-click="addIssue(issue)">Add</button>
+			<button ng-show="issue.added" ng-click="removeIssue(issue)">Remove</button>
+		</li>
+	</ul>
+	
+
+	<button id="submit" ng-click="save()">Save</button>
+</div>

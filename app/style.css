@@ -1,0 +1,16 @@
+
+.editor-editable
+{
+	background-color: #ffffe0;
+	min-width: 500px;
+	min-height: 500px;
+	border-style: solid; 
+	display: block;
+}
+
+.article_item 
+{
+	padding: 5px; 
+	background-color: #ccffff;
+	margin: 5px;
+}
